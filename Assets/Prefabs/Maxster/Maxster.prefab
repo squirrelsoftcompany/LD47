@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sliding: 0
-  dashDistance: 2
+  dashDistance: 3
 --- !u!1 &8372904417352098491
 GameObject:
   m_ObjectHideFlags: 0

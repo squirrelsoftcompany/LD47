@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3efccdf357a656419ad2a0e9596a453, type: 3}
+  m_Name: WheelObstaclesSO
+  m_EditorClassIdentifier: 
+  wheelObstacles:
+  - {fileID: 7079093488261013284, guid: c2e4e7af0061e3449a0e7b2432496c5a, type: 3}
+  - {fileID: 4759998584065775168, guid: b448a45c713290244bc25e246462fef0, type: 3}
+  - {fileID: 5743018880016248574, guid: 51378b3101c533b4d88f43128150c65f, type: 3}

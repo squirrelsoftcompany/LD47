@@ -7,6 +7,8 @@ namespace Generation
     [CreateAssetMenu(fileName = "WheelObstaclesSO", menuName = "SO/Generation/WheelObstacles")]
     public class WheelObstaclesSO : ScriptableObject
     {
-        public List<GameObject> wheelObstacles;
+        public List<WheelObstacleRow> rows;
+        // generate one line every tickRate tick
+        public int tickRate = 3;
     }
 }

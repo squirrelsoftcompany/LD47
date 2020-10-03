@@ -4,14 +4,46 @@ using UnityEngine;
 
 namespace Generation
 {
+    [System.Serializable]
+    public class WheelObstacleRow
+    {
+        public GameObject left = null;
+        public GameObject middle = null;
+        public GameObject right = null;
+
+        public GameObject this[Behaviour.PlayerMovement.LINE l]
+        {
+            get
+            {
+                GameObject go = null;
+                switch (l)
+                {
+                    case Behaviour.PlayerMovement.LINE.eLEFT:
+                        go = left;
+                        break;
+                    case Behaviour.PlayerMovement.LINE.eMIDDLE:
+                        go = middle;
+                        break;
+                    case Behaviour.PlayerMovement.LINE.eRIGHT:
+                        go = right;
+                        break;
+                }
+
+                return go;
+            }
+        }
+    }
+
     public class WheelObstacleGeneration : MonoBehaviour
     {
         public WheelObstaclesSO wheelObstacles;
 
+        private int tickCount = 0;
+
         // Start is called before the first frame update
         void Start()
         {
-            
+            tickCount = wheelObstacles.tickRate;
         }
 
         // Update is called once per frame
@@ -22,13 +54,28 @@ namespace Generation
         
         public void Tick()
         {
+            tickCount -= 1;
+            if (tickCount > 0)
+                return;
+
             float fraction = 360f / Dora.Inst.behaviourSettings.wheelPartCount;
-            GenerateOne((Behaviour.PlayerMovement.LINE)Random.Range(0, 3), fraction * -(Dora.Inst.behaviourSettings.wheelPartCount / 3)); // Player can see a little more than 1/4 of the wheel -> so appear at 1/3
+            GenerateRow(wheelObstacles.rows[Random.Range(0, wheelObstacles.rows.Count)], fraction * -(Dora.Inst.behaviourSettings.wheelPartCount / 3)); // Player can see a little more than 1/4 of the wheel -> so appear at 1/3
+            tickCount = wheelObstacles.tickRate;
         }
 
-        public GameObject GenerateOne(Behaviour.PlayerMovement.LINE line, float pitch)
+        public void GenerateRow(WheelObstacleRow row, float pitch)
         {
-            GameObject prefab = Instantiate(wheelObstacles.wheelObstacles[Random.Range(0, wheelObstacles.wheelObstacles.Count)], transform);
+            for (int i = 0; i < 3; i++)
+            {
+                var l = (Behaviour.PlayerMovement.LINE)i;
+                if (row[l])
+                    GenerateOne(row[l], l, pitch);
+            }
+        }
+
+        public GameObject GenerateOne(GameObject obstacle, Behaviour.PlayerMovement.LINE line, float pitch)
+        {
+            GameObject prefab = Instantiate(obstacle, transform);
             prefab.transform.Translate(new Vector3(((int)line - 1) * 3, 0, 0));
             prefab.transform.localRotation = Quaternion.Inverse(transform.rotation) * Quaternion.Euler(Vector3.right * pitch);
             

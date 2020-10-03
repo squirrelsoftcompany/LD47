@@ -15,3 +15,13 @@ MonoBehaviour:
   wheelTick: 1
   initialWheelSpeed: 2
   initialFame: 0.1
+  wheelPartCount: 60
+  wheelSpeedMin: 0
+  wheelSpeedMax: 8
+  fameMin: 0
+  fameMax: 1
+  wheelSpeedPercentIncrement: 0.001
+  wheelSpeedPercentDecrement: -0.05
+  fameSlidePercentIncrement: 0.01
+  famePercentIncrement: 0.001
+  famePercentDecrement: -0.1

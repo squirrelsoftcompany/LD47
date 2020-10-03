@@ -16,5 +16,18 @@ namespace Behaviour
         public float initialFame = 0.1f;
         [Tooltip("How much wheel part is needed")]
         public int wheelPartCount = 60;
+
+        [Header("Limits")]
+        public float wheelSpeedMin = 0;
+        public float wheelSpeedMax = 6;
+        public float fameMin = 0;
+        public float fameMax = 1;
+
+        [Header("Increments")]
+        public float wheelSpeedPercentIncrement = 0.001f; // incr / tick
+        public float wheelSpeedPercentDecrement = -0.05f; // decr / hit
+        public float fameSlidePercentIncrement = 0.01f; // incr / successful slide
+        public float famePercentIncrement = 0.001f; // incr / tick
+        public float famePercentDecrement = -0.1f; // decr / hit
     }
 }

@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1357951633759038586}
   - component: {fileID: 1357951633759038589}
+  - component: {fileID: 2055270747}
+  - component: {fileID: 8077247953167193097}
+  - component: {fileID: 5027958364290596777}
   m_Layer: 0
   m_Name: _Dora
   m_TagString: Untagged
@@ -46,3 +49,47 @@ MonoBehaviour:
   gameState: {fileID: 11400000, guid: 9c124400ca6924c4b8619eb20c427e65, type: 2}
   behaviourSettings: {fileID: 11400000, guid: f319b01a715308349bcd14d6e574007c, type: 2}
   WheelTick: {fileID: 11400000, guid: 96b24adaba130f84595042225241ece5, type: 2}
+--- !u!114 &2055270747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357951633759038587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67d2f34f09bafb14d825eb7c79888b6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSound: {fileID: 8300000, guid: 9a5f43579df0e8441946334378b1afd1, type: 3}
+  hurtSound: {fileID: 8300000, guid: c029ffdef20c79e4c836b1d1b961461e, type: 3}
+  slideSound: {fileID: 8300000, guid: 19667655c1abb944abb7541c94c2aa6e, type: 3}
+  supporterSound: {fileID: 8300000, guid: 9af6a53fd3a47cc4383ed46a13c2e41d, type: 3}
+--- !u!114 &8077247953167193097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357951633759038587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21bcdf4992225c418328d35e52e5764, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mMusicList: []
+  mCurrentIndex: 0
+  mPauseDuration: 0
+--- !u!114 &5027958364290596777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357951633759038587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebca8f73b66c4204a99ed3faefa25ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mMusic: {fileID: 0}

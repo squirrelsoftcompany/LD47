@@ -16,6 +16,6 @@ public class ScoreScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = string.Format("{0:00000000}", Mathf.FloorToInt(Dora.Inst.gameState.score));
+        text.text = string.Format("{0:0 000 000}", System.Math.Floor(Dora.Inst.gameState.score));
     }
 }

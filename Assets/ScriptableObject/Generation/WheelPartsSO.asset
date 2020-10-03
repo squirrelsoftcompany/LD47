@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d32cc96a78a49c49bb6f9f031de3c3e, type: 3}
+  m_Name: WheelPartsSO
+  m_EditorClassIdentifier: 
+  wheelParts:
+  - {fileID: 2994769255422705327, guid: 98df1dc5a84806e448239fc290b80743, type: 3}
+  - {fileID: 3734639753784456075, guid: 14b481a443328934996da5f86d51ed55, type: 3}
+  - {fileID: 889415276658768550, guid: 3c22ddbf6d6d3834da0f38409fee8117, type: 3}
+  howMuchPartNeeded: 60

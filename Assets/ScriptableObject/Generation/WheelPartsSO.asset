@@ -13,7 +13,5 @@ MonoBehaviour:
   m_Name: WheelPartsSO
   m_EditorClassIdentifier: 
   wheelParts:
-  - {fileID: 2994769255422705327, guid: 98df1dc5a84806e448239fc290b80743, type: 3}
+  - {fileID: 4515857021645326564, guid: 96fb8f694176dc74383b935335232d4e, type: 3}
   - {fileID: 3734639753784456075, guid: 14b481a443328934996da5f86d51ed55, type: 3}
-  - {fileID: 889415276658768550, guid: 3c22ddbf6d6d3834da0f38409fee8117, type: 3}
-  howMuchPartNeeded: 60

@@ -55,6 +55,7 @@ namespace Behaviour
                 return;
 
             animator.SetTrigger("ToLeft");
+            SoundEffectsManager.Instance.MakeDashSound();
             Vector3 position = this.transform.position;
             position.x -= dashDistance;
             this.transform.position = position;
@@ -67,6 +68,7 @@ namespace Behaviour
                 return;
 
             animator.SetTrigger("ToRight");
+            SoundEffectsManager.Instance.MakeDashSound();
             Vector3 position = this.transform.position;
             position.x += dashDistance;
             this.transform.position = position;
@@ -78,6 +80,7 @@ namespace Behaviour
             if (sliding || !animator.GetCurrentAnimatorStateInfo(0).IsName("Run"))
                 return;
 
+            SoundEffectsManager.Instance.MakeSlideSound();
             animator.SetTrigger("Slide");
         }
     }

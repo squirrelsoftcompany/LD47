@@ -8,7 +8,7 @@ namespace Behaviour
     [RequireComponent(typeof(Animator))]
     public class PlayerMovement : MonoBehaviour
     {
-        enum LINE
+        public enum LINE
         {
             eRIGHT,
             eMIDDLE,

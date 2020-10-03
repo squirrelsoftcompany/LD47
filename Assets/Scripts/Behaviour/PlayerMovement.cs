@@ -22,7 +22,7 @@ namespace Behaviour
         private Animator animator;
 
         public bool Sliding { get => sliding; }
-        public float dashDistance = 2.0f;
+        public float dashDistance = 3.0f;
 
         // Start is called before the first frame update
         void Start()

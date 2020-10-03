@@ -5,7 +5,6 @@ using UnityEngine;
 
 namespace Behaviour
 {
-    [RequireComponent(typeof(Generation.WheelGeneration))]
     public class WheelMovement : MonoBehaviour
     {
         // Start is called before the first frame update

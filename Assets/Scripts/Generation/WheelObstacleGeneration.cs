@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace Generation
 {
-    [RequireComponent(typeof(WheelGeneration))]
     public class WheelObstacleGeneration : MonoBehaviour
     {
         public WheelObstaclesSO wheelObstacles;

@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3139775612690032525}
   - component: {fileID: 3139775612690032514}
   - component: {fileID: 3139775612690032515}
-  - component: {fileID: 3139775612690032524}
+  - component: {fileID: 4052178249317839932}
   m_Layer: 0
   m_Name: WheelObstacleModel
-  m_TagString: Untagged
+  m_TagString: Obstacle/Mur
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3139775612690032524
+--- !u!65 &4052178249317839932
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 3139775612780992397}
   m_Layer: 0
   m_Name: WheelObstacle
-  m_TagString: Untagged
+  m_TagString: Obstacle/Mur
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

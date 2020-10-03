@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wheelParts:
   - {fileID: 4515857021645326564, guid: 96fb8f694176dc74383b935335232d4e, type: 3}
-  - {fileID: 3734639753784456075, guid: 14b481a443328934996da5f86d51ed55, type: 3}
+  - {fileID: 3081044802867886209, guid: c9ed7b13fcc4ba346b13041c32b2d42c, type: 3}
+  - {fileID: 8708804902423682168, guid: 03b554ef802c6be478d06ad2a2028842, type: 3}
+  - {fileID: 7924567651615147616, guid: 5a968e72ae142934b9b4b6faea6e390f, type: 3}
+  - {fileID: 7444832135687609600, guid: 9ea2f64f28121e54fa49ec3430149209, type: 3}

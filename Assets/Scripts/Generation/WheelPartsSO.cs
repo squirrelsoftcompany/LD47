@@ -8,6 +8,5 @@ namespace Generation
     public class WheelPartsSO : ScriptableObject
     {
         public List<GameObject> wheelParts;
-        public float howMuchPartNeeded = 60;
     }
 }

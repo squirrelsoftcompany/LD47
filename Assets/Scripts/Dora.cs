@@ -8,9 +8,13 @@ public class Dora : MonoBehaviour
     public GameStateSO gameState;
     public BehaviourSettingsSO behaviourSettings;
 
-    private Dora instance = null;
+    public GameEvent WheelTick;
 
-    public Dora Inst { get => instance; set => instance = value; }
+    private static Dora instance = null;
+
+    public static Dora Inst { get => instance; set => instance = value; }
+
+    private float timer = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -20,11 +24,23 @@ public class Dora : MonoBehaviour
         instance = this;
         gameState.currentFame = behaviourSettings.initialFame;
         gameState.currentWheelSpeed = behaviourSettings.initialWheelSpeed;
+
+        // initialize timer
+        timer = behaviourSettings.wheelTick / behaviourSettings.initialWheelSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (gameState.currentWheelSpeed == 0)
+            return;
+
+        timer -= Time.deltaTime;
+
+        if (timer <= 0)
+        {
+            WheelTick.Raise();
+            timer = behaviourSettings.wheelTick / gameState.currentWheelSpeed;
+        }
     }
 }

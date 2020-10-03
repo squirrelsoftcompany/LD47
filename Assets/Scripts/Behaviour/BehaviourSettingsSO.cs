@@ -14,5 +14,7 @@ namespace Behaviour
         public float initialWheelSpeed = 0.5f;
         [Tooltip("Initial fame of the run")]
         public float initialFame = 0.1f;
+        [Tooltip("How much wheel part is needed")]
+        public int wheelPartCount = 60;
     }
 }

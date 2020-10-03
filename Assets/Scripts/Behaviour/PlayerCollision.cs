@@ -41,6 +41,7 @@ namespace Behaviour
             // TODO -> launch hit animation
             Dora.Inst.AddFame(Dora.Inst.behaviourSettings.famePercentDecrement);
             Dora.Inst.AddWheelSpeed(Dora.Inst.behaviourSettings.wheelSpeedPercentDecrement);
+            SoundEffectsManager.Instance.MakeHurtSound();
         }
     }
 }

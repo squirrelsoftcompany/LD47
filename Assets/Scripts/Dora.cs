@@ -24,6 +24,7 @@ public class Dora : MonoBehaviour
         instance = this;
         gameState.currentFame = behaviourSettings.initialFame;
         gameState.currentWheelSpeed = behaviourSettings.initialWheelSpeed;
+        gameState.score = 0;
 
         // initialize timer
         timer = behaviourSettings.wheelTick / behaviourSettings.initialWheelSpeed;
@@ -42,5 +43,7 @@ public class Dora : MonoBehaviour
             WheelTick.Raise();
             timer = behaviourSettings.wheelTick / gameState.currentWheelSpeed;
         }
+
+        gameState.score += Time.deltaTime * 1000 * gameState.currentFame;
     }
 }

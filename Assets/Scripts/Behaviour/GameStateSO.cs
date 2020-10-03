@@ -9,5 +9,6 @@ namespace Behaviour
     {
         public float currentWheelSpeed = 0.5f;
         public float currentFame = 0.5f;
+        public float score = 0.0f;
     }
 }

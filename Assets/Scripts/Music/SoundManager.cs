@@ -27,11 +27,6 @@ public class SoundManager : MonoBehaviour
     public static SoundManager m_instance = null;
     public AudioMixer masterMixer;
 
-    void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
-
     // Start is called before the first frame update
     void Start()
     {

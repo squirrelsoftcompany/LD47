@@ -33,4 +33,12 @@ public class CrowdManagement : MonoBehaviour
             }
         }
     }
+
+    public void GameOverSlot()
+    {
+        foreach (var elem in Crowd)
+        {
+            elem.SetActive(false);
+        }
+    }
 }

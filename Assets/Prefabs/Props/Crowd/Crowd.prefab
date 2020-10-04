@@ -189,7 +189,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4539116212256751828}
         m_TargetAssemblyTypeName: CrowdManagement, Assembly-CSharp
-        m_MethodName: Tick
+        m_MethodName: GameOverSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

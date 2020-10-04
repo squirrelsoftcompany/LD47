@@ -161,6 +161,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf2c06cbd6afd4c459c3bbfcf4b473ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  successfulSlideEvent: {fileID: 11400000, guid: b660bd46e56af874e90f8baeef2e66f4,
+    type: 2}
+  hitEvent: {fileID: 11400000, guid: a43326ac3afccf64ab82bb233f143b64, type: 2}
 --- !u!1 &8372904417352098491
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,6 +24,9 @@ namespace Behaviour
 
         }
 
+        public GameEvent successfulSlideEvent;
+        public GameEvent hitEvent;
+
         private void OnTriggerEnter(Collider other)
         {
             if (!other.CompareTag("Obstacle/Barre") && !other.CompareTag("Obstacle/Mur"))
@@ -33,14 +36,13 @@ namespace Behaviour
             if (other.CompareTag("Obstacle/Barre") && playerMovement.sliding)
             {
                 // huge fame
-                Dora.Inst.AddFame(Dora.Inst.behaviourSettings.fameSlidePercentIncrement);
+                successfulSlideEvent.Raise();
                 return;
             }
 
             // Hitted
             // TODO -> launch hit animation
-            Dora.Inst.AddFame(Dora.Inst.behaviourSettings.famePercentDecrement);
-            Dora.Inst.AddWheelSpeed(Dora.Inst.behaviourSettings.wheelSpeedPercentDecrement);
+            hitEvent.Raise();
             SoundEffectsManager.Instance.MakeHurtSound();
         }
     }

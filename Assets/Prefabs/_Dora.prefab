@@ -12,6 +12,10 @@ GameObject:
   - component: {fileID: 1357951633759038589}
   - component: {fileID: 2055270747}
   - component: {fileID: 8077247953167193097}
+  - component: {fileID: 2721984809118396554}
+  - component: {fileID: 8542298100873995718}
+  - component: {fileID: 878515427792093958}
+  - component: {fileID: 4985335126501127740}
   m_Layer: 0
   m_Name: _Dora
   m_TagString: Untagged
@@ -47,7 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameState: {fileID: 11400000, guid: 9c124400ca6924c4b8619eb20c427e65, type: 2}
   behaviourSettings: {fileID: 11400000, guid: f319b01a715308349bcd14d6e574007c, type: 2}
-  WheelTick: {fileID: 11400000, guid: 96b24adaba130f84595042225241ece5, type: 2}
+  WheelTickEvent: {fileID: 11400000, guid: 96b24adaba130f84595042225241ece5, type: 2}
 --- !u!114 &2055270747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,3 +84,136 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0bf51407965196e46891f57ee01759f6, type: 3}
   mCurrentIndex: 0
   mPauseDuration: 0
+--- !u!114 &2721984809118396554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357951633759038587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c2be1861dafcba489353384ccd9e6c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameOverEvent: {fileID: 11400000, guid: 80ef567cbdce8964cb03ba42780e30c9, type: 2}
+--- !u!114 &8542298100873995718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357951633759038587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39e69ee488484439cd909f5f2a3254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 96b24adaba130f84595042225241ece5, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2721984809118396554}
+        m_TargetAssemblyTypeName: ScoreSystem, Assembly-CSharp
+        m_MethodName: Tick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  responseForSentString:
+    m_PersistentCalls:
+      m_Calls: []
+  responseForSentInt:
+    m_PersistentCalls:
+      m_Calls: []
+  responseForSentFloat:
+    m_PersistentCalls:
+      m_Calls: []
+  responseForSentBool:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &878515427792093958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357951633759038587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39e69ee488484439cd909f5f2a3254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a43326ac3afccf64ab82bb233f143b64, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2721984809118396554}
+        m_TargetAssemblyTypeName: ScoreSystem, Assembly-CSharp
+        m_MethodName: Hit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  responseForSentString:
+    m_PersistentCalls:
+      m_Calls: []
+  responseForSentInt:
+    m_PersistentCalls:
+      m_Calls: []
+  responseForSentFloat:
+    m_PersistentCalls:
+      m_Calls: []
+  responseForSentBool:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4985335126501127740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357951633759038587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39e69ee488484439cd909f5f2a3254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: b660bd46e56af874e90f8baeef2e66f4, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2721984809118396554}
+        m_TargetAssemblyTypeName: ScoreSystem, Assembly-CSharp
+        m_MethodName: SuccessfulSlide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  responseForSentString:
+    m_PersistentCalls:
+      m_Calls: []
+  responseForSentInt:
+    m_PersistentCalls:
+      m_Calls: []
+  responseForSentFloat:
+    m_PersistentCalls:
+      m_Calls: []
+  responseForSentBool:
+    m_PersistentCalls:
+      m_Calls: []

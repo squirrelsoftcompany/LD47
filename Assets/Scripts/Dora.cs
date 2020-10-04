@@ -8,7 +8,7 @@ public class Dora : MonoBehaviour
     public GameStateSO gameState;
     public BehaviourSettingsSO behaviourSettings;
 
-    public GameEvent WheelTick;
+    public GameEvent WheelTickEvent;
 
     private static Dora instance = null;
 
@@ -35,7 +35,6 @@ public class Dora : MonoBehaviour
     {
         if (gameState.currentWheelSpeed == 0 || gameState.currentFame == 0)
         {
-            Loose();
             return;
         }
 
@@ -43,32 +42,8 @@ public class Dora : MonoBehaviour
 
         if (timer <= 0)
         {
-            WheelTick.Raise();
-            AddFame(behaviourSettings.famePercentIncrement);
-            AddWheelSpeed(behaviourSettings.wheelSpeedPercentIncrement);
+            WheelTickEvent.Raise();
             timer = behaviourSettings.wheelTick / gameState.currentWheelSpeed;
         }
-
-        gameState.score += Time.deltaTime * 1000 * gameState.currentFame;
-    }
-
-    public void AddFame(float percentIncr)
-    {
-        float range = behaviourSettings.fameMax - behaviourSettings.fameMin;
-        gameState.currentFame = Mathf.Clamp(gameState.currentFame + percentIncr * range, behaviourSettings.fameMin, behaviourSettings.fameMax);
-    }
-
-    public void AddWheelSpeed(float percentIncr)
-    {
-        float range = behaviourSettings.wheelSpeedMax - behaviourSettings.wheelSpeedMin;
-        gameState.currentWheelSpeed = Mathf.Clamp(gameState.currentWheelSpeed + percentIncr * range, behaviourSettings.wheelSpeedMin, behaviourSettings.wheelSpeedMax);
-    }
-
-    private void Loose()
-    {
-        // TODO -> loose
-        Debug.Log("You loose !!!");
-        gameState.currentWheelSpeed = 0;
-        gameState.currentFame = 0;
     }
 }

@@ -55,7 +55,7 @@ public class SoundManager : MonoBehaviour
 
         float volume60bpm = ComputeVolume(currentBpm,0,180,6) + ComputeVolume(currentBpm, 240, 3000, 6);
         float volume120bpm = ComputeVolume(currentBpm,120,3000,6);
-        float volume240bpm = ComputeVolume(currentBpm,240,3000,6);
+        float volume240bpm = ComputeVolume(currentBpm,180,3000,6);
         float volume300bpm = ComputeVolume(currentBpm,300,3000,6);
 
 

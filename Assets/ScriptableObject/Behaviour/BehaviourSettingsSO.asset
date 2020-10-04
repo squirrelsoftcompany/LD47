@@ -16,7 +16,7 @@ MonoBehaviour:
   initialFame: 0.1
   wheelPartCount: 60
   wheelSpeedMin: 2
-  wheelSpeedMax: 8
+  wheelSpeedMax: 12
   fameMin: 0
   fameMax: 1
   wheelSpeedPercentIncrement: 0.001

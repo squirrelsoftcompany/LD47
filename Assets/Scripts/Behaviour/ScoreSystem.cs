@@ -41,6 +41,9 @@ public class ScoreSystem : MonoBehaviour
     {
         AddFame(Dora.Inst.behaviourSettings.famePercentDecrement);
         AddWheelSpeed(Dora.Inst.behaviourSettings.wheelSpeedPercentDecrement);
+
+        if (Dora.Inst.gameState.currentFame <= 0)
+            GameOver();
     }
 
     private void GameOver()
@@ -56,8 +59,6 @@ public class ScoreSystem : MonoBehaviour
     private void AddFame(float incrPercent)
     {
         Dora.Inst.gameState.currentFame = AddGeneric(incrPercent, Dora.Inst.gameState.currentFame, Dora.Inst.behaviourSettings.fameMin, Dora.Inst.behaviourSettings.fameMax);
-        if (Dora.Inst.gameState.currentFame <= 0)
-            GameOver();
     }
 
     private void AddWheelSpeed(float incrPercent)

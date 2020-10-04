@@ -1,15 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-/// <summary>
-/// Création d'effets sonores en toute simplicité
-/// </summary>
+
 public class SoundEffectsManager : MonoBehaviour
 {
 
-    /// <summary>
-    /// Singleton
-    /// </summary>
     public static SoundEffectsManager Instance;
 
     public AudioClip dashSound;

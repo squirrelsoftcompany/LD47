@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
 {
@@ -11,20 +12,20 @@ public class SoundManager : MonoBehaviour
             return m_instance;
         }
     }
-    public AudioSource Music
-    {
-        get
-        {
-            return mMusic;
-        }
-        set
-        {
-            mMusic = value;
-        }
-    }
+    //public AudioSource Music
+    //{
+    //    get
+    //    {
+    //        return mMusic;
+    //    }
+    //    set
+    //    {
+    //        mMusic = value;
+    //    }
+    //}
 
     public static SoundManager m_instance = null;
-    [SerializeField] private AudioSource mMusic;
+    public AudioMixer masterMixer;
 
     void Awake()
     {
@@ -43,45 +44,98 @@ public class SoundManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //float maxPitchFactor = Dora.Inst.behaviourSettings.wheelSpeedMax / Dora.Inst.behaviourSettings.wheelSpeedMin;
+        float currentPitch = Dora.Inst.gameState.currentWheelSpeed / Dora.Inst.behaviourSettings.wheelSpeedMin;
+        float currentBpm = (currentPitch * 60.0f);
+
+
+        SetBasePitch(currentPitch);
+
+        float minDecile = Dora.Inst.behaviourSettings.wheelSpeedMin / 10.0f;
+
+        float volume60bpm = ComputeVolume(currentBpm,0,180,6) + ComputeVolume(currentBpm, 240, 3000, 6);
+        float volume120bpm = ComputeVolume(currentBpm,120,3000,6);
+        float volume240bpm = ComputeVolume(currentBpm,240,3000,6);
+        float volume300bpm = ComputeVolume(currentBpm,300,3000,6);
+
+
+        Set60BpmVolume(Mathf.Lerp(0.0001f, 1f, volume60bpm / 100.0f));
+        Set120BpmVolume(Mathf.Lerp(0.0001f, 1f, volume120bpm / 100.0f));
+        Set240BpmVolume(Mathf.Lerp(0.0001f, 1f, volume240bpm / 100.0f));
+        Set300BpmVolume(Mathf.Lerp(0.0001f, 1f, volume300bpm / 100.0f));
+
+        //Set60BpmPitch(pitch60bpm);
+        //Set120BpmPitch(pitch120bpm);
+        //Set240BpmPitch(pitch240bpm);
+        //Set300BpmPitch(pitch300bpm);
     }
 
-    public void PlayLoopSingle(AudioClip clip)
+    public void SetMusicVolume(float volume)
     {
-        mMusic.clip = clip;
-        mMusic.loop = true;
-        mMusic.Play();
+        masterMixer.SetFloat("volume", Mathf.Log10(volume) * 20);
     }
 
-    public void PlaySingle(AudioClip clip)
+    public void SetBasePitch(float pitch)
     {
-        mMusic.clip = clip;
-        mMusic.loop = false;
-        mMusic.Play();
+        masterMixer.SetFloat("pitch", pitch/2.0f);
     }
 
-    public IEnumerator FadeOut(float pFadeTime)
+    public void Set60BpmPitch(float pitch)
     {
-        float startVolume = mMusic.volume;
+        masterMixer.SetFloat("60bpmPitch", pitch);
+    }
 
-        while (mMusic.volume > 0)
+    public void Set120BpmPitch(float pitch)
+    {
+        masterMixer.SetFloat("120bpmPitch", pitch);
+    }
+
+    public void Set240BpmPitch(float pitch)
+    {
+        masterMixer.SetFloat("240bpmPitch", pitch);
+    }
+
+    public void Set300BpmPitch(float pitch)
+    {
+        masterMixer.SetFloat("300bpmPitch", pitch);
+    }
+
+    public void Set60BpmVolume(float volume)
+    {
+        masterMixer.SetFloat("60bpm", Mathf.Log10(volume) * 20);
+    }
+
+    public void Set120BpmVolume(float volume)
+    {
+        masterMixer.SetFloat("120bpm", Mathf.Log10(volume) * 20);
+    }
+
+    public void Set240BpmVolume(float volume)
+    {
+        masterMixer.SetFloat("240bpm", Mathf.Log10(volume) * 20);
+    }
+    public void Set300BpmVolume(float volume)
+    {
+        masterMixer.SetFloat("300bpm", Mathf.Log10(volume) * 20);
+    }
+
+    private float ComputeVolume(float currentBpm, float start, float stop, float fade)
+    {
+        float volume = 0;
+        if(currentBpm > start - fade && currentBpm < start + fade)
         {
-            mMusic.volume -= startVolume * Time.deltaTime / pFadeTime;
-            yield return null;
+            float progression = Mathf.InverseLerp(start - fade, start + fade, currentBpm);
+            volume = Mathf.Lerp(0.0f, 100.0f, progression);
         }
-        mMusic.Stop();
-        mMusic.volume = startVolume;
-    }
-
-    public IEnumerator FadeIn(float pFadeTime)
-    {
-        mMusic.volume = 0;
-        mMusic.Play();
-        while (mMusic.volume < 1)
+        else if(currentBpm > start + fade && currentBpm < stop - fade)
         {
-            mMusic.volume += Time.deltaTime / pFadeTime;
-            yield return null;
+            volume = 100;
         }
+        else if (currentBpm > stop - fade && currentBpm < stop + fade)
+        {
+            float progression = Mathf.InverseLerp(stop - fade, stop + fade, currentBpm);
+            volume = 100.0f - Mathf.Lerp(0.0f, 100.0f, progression);
+        }
+        return volume;
     }
-
 }

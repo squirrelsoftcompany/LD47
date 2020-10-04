@@ -21,28 +21,28 @@ public class MusicPlaylist : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!SoundManager.Instance.Music.isPlaying && mCurrentIndex < mMusicList.Count)
-        {
-            mPauseTimer = mPauseTimer + Time.deltaTime;
-            if(mPauseTimer> mPauseDuration)
-            {
-                SoundManager.Instance.PlaySingle(mMusicList[mCurrentIndex]);
-                mCurrentIndex++;
-                mFadeStart = false;
-                mPauseTimer = 0;
-            }
-        }
-        else if (!SoundManager.Instance.Music.isPlaying && mCurrentIndex >= mMusicList.Count)
-        {
-            mCurrentIndex = 0;
-        }
-        else
-        {
-            if(!mFadeStart && SoundManager.Instance.Music.time > SoundManager.Instance.Music.clip.length - mFadeTime)
-            {
-                StartCoroutine(SoundManager.Instance.FadeOut(mFadeTime));
-                mFadeStart = true;
-            }
-        }
+        //if (!SoundManager.Instance.Music.isPlaying && mCurrentIndex < mMusicList.Count)
+        //{
+        //    mPauseTimer = mPauseTimer + Time.deltaTime;
+        //    if(mPauseTimer> mPauseDuration)
+        //    {
+        //        SoundManager.Instance.PlaySingle(mMusicList[mCurrentIndex]);
+        //        mCurrentIndex++;
+        //        mFadeStart = false;
+        //        mPauseTimer = 0;
+        //    }
+        //}
+        //else if (!SoundManager.Instance.Music.isPlaying && mCurrentIndex >= mMusicList.Count)
+        //{
+        //    mCurrentIndex = 0;
+        //}
+        //else
+        //{
+        //    if(!mFadeStart && SoundManager.Instance.Music.time > SoundManager.Instance.Music.clip.length - mFadeTime)
+        //    {
+        //        StartCoroutine(SoundManager.Instance.FadeOut(mFadeTime));
+        //        mFadeStart = true;
+        //    }
+        //}
     }
 }

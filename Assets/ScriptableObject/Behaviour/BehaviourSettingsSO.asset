@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67aa361a62fdceb42a794f87501d521c, type: 3}
   m_Name: BehaviourSettingsSO
   m_EditorClassIdentifier: 
-  wheelTick: 1
   initialWheelSpeed: 2
   initialFame: 0.1
   wheelPartCount: 60

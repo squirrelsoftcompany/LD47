@@ -8,13 +8,11 @@ namespace Behaviour
     [CreateAssetMenu(fileName = "BehaviourSettingsSO", menuName = "SO/Behaviour/Settings")]
     public class BehaviourSettingsSO : ScriptableObject
     {
-        [Tooltip("Base time in seconds at which the wheel move")]
-        public float wheelTick = 0.5f;
-        [Tooltip("Initial divisor to apply to the base time")]
+        [Tooltip("Initial speed (tick/sec.)")]
         public float initialWheelSpeed = 0.5f;
         [Tooltip("Initial fame of the run")]
         public float initialFame = 0.1f;
-        [Tooltip("How much wheel part is needed")]
+        [Tooltip("How much wheel part are needed")]
         public int wheelPartCount = 60;
 
         [Header("Limits")]

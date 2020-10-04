@@ -30,7 +30,7 @@ public class Dora : MonoBehaviour
         gameState.running = false;
 
         // initialize timer
-        timer = behaviourSettings.wheelTick / behaviourSettings.initialWheelSpeed;
+        timer = 1/gameState.currentWheelSpeed;
     }
 
     public void Run()
@@ -51,7 +51,7 @@ public class Dora : MonoBehaviour
         if (timer <= 0)
         {
             WheelTickEvent.Raise();
-            timer = behaviourSettings.wheelTick / gameState.currentWheelSpeed;
+            timer = 1/gameState.currentWheelSpeed;
         }
     }
 }

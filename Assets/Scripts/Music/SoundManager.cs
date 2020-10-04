@@ -63,11 +63,6 @@ public class SoundManager : MonoBehaviour
         Set120BpmVolume(Mathf.Lerp(0.0001f, 1f, volume120bpm / 100.0f));
         Set240BpmVolume(Mathf.Lerp(0.0001f, 1f, volume240bpm / 100.0f));
         Set300BpmVolume(Mathf.Lerp(0.0001f, 1f, volume300bpm / 100.0f));
-
-        //Set60BpmPitch(pitch60bpm);
-        //Set120BpmPitch(pitch120bpm);
-        //Set240BpmPitch(pitch240bpm);
-        //Set300BpmPitch(pitch300bpm);
     }
 
     public void SetMusicVolume(float volume)

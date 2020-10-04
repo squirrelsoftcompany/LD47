@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8542298100873995718}
   - component: {fileID: 878515427792093958}
   - component: {fileID: 4985335126501127740}
+  - component: {fileID: 1833894315139905184}
   - component: {fileID: 2330302367198135742}
   m_Layer: 0
   m_Name: _Dora
@@ -197,6 +198,46 @@ MonoBehaviour:
       - m_Target: {fileID: 2721984809118396554}
         m_TargetAssemblyTypeName: ScoreSystem, Assembly-CSharp
         m_MethodName: SuccessfulSlide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  responseForSentString:
+    m_PersistentCalls:
+      m_Calls: []
+  responseForSentInt:
+    m_PersistentCalls:
+      m_Calls: []
+  responseForSentFloat:
+    m_PersistentCalls:
+      m_Calls: []
+  responseForSentBool:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1833894315139905184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357951633759038587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39e69ee488484439cd909f5f2a3254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: bd5a940a484a8de4faf4941b85201a84, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1357951633759038589}
+        m_TargetAssemblyTypeName: Dora, Assembly-CSharp
+        m_MethodName: Run
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

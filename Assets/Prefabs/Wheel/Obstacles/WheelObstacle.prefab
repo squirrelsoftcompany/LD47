@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4052178249317839932}
   m_Layer: 0
   m_Name: WheelObstacleModel
-  m_TagString: Obstacle/Mur
+  m_TagString: Obstacle/Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 3139775612780992397}
   m_Layer: 0
   m_Name: WheelObstacle
-  m_TagString: Obstacle/Mur
+  m_TagString: Obstacle/Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

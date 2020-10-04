@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Obstacle/Mur
-  - Obstacle/Barre
+  - Obstacle/Limbo
+  - Obstacle/Wall
   layers:
   - Default
   - TransparentFX

@@ -20,7 +20,7 @@ PrefabInstance:
     - target: {fileID: 3139775612690032526, guid: 30d88b020e8e35149b86ab0866d5017a,
         type: 3}
       propertyPath: m_TagString
-      value: Obstacle/Barre
+      value: Obstacle/Limbo
       objectReference: {fileID: 0}
     - target: {fileID: 3139775612780992397, guid: 30d88b020e8e35149b86ab0866d5017a,
         type: 3}
@@ -85,7 +85,7 @@ PrefabInstance:
     - target: {fileID: 3139775612780992398, guid: 30d88b020e8e35149b86ab0866d5017a,
         type: 3}
       propertyPath: m_TagString
-      value: Obstacle/Barre
+      value: Obstacle/Limbo
       objectReference: {fileID: 0}
     - target: {fileID: 4052178249317839932, guid: 30d88b020e8e35149b86ab0866d5017a,
         type: 3}

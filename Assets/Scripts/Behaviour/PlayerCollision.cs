@@ -29,13 +29,12 @@ namespace Behaviour
 
         private void OnTriggerEnter(Collider other)
         {
-            if (!other.CompareTag("Obstacle/Barre") && !other.CompareTag("Obstacle/Mur"))
+            if (!other.CompareTag("Obstacle/Limbo") && !other.CompareTag("Obstacle/Wall"))
                 // Nothing
                 return;
 
-            if (other.CompareTag("Obstacle/Barre") && playerMovement.sliding)
+            if (other.CompareTag("Obstacle/Limbo") && playerMovement.sliding)
             {
-                // huge fame
                 successfulSlideEvent.Raise();
                 return;
             }

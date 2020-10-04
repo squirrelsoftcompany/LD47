@@ -20,7 +20,7 @@ public class CrowdManagement : MonoBehaviour
 
     public void Tick()
     {
-        float step = (Dora.Inst.behaviourSettings.fameMax - Dora.Inst.behaviourSettings.fameMin) / (Crowd.Count);
+        float step = (Dora.Inst.behaviourSettings.fameMax - Dora.Inst.behaviourSettings.fameMin) / (Crowd.Count-1);
         for (int i = 0; i < Crowd.Count; i++)
         {
             if (Dora.Inst.gameState.currentFame >= Dora.Inst.behaviourSettings.fameMin + i * step)

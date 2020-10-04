@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8542298100873995718}
   - component: {fileID: 878515427792093958}
   - component: {fileID: 4985335126501127740}
+  - component: {fileID: 2330302367198135742}
   m_Layer: 0
   m_Name: _Dora
   m_TagString: Untagged
@@ -217,3 +218,16 @@ MonoBehaviour:
   responseForSentBool:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2330302367198135742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357951633759038587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebca8f73b66c4204a99ed3faefa25ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterMixer: {fileID: 24100000, guid: 8522f221a0533bf41a3871d359413161, type: 2}

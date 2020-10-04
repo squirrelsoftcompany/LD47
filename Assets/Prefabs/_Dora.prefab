@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4985335126501127740}
   - component: {fileID: 1833894315139905184}
   - component: {fileID: 2330302367198135742}
+  - component: {fileID: 6369109085361865426}
   m_Layer: 0
   m_Name: _Dora
   m_TagString: Untagged
@@ -255,3 +256,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterMixer: {fileID: 24100000, guid: 8522f221a0533bf41a3871d359413161, type: 2}
+--- !u!114 &6369109085361865426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357951633759038587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbafeaef1faf3114b8770d2297e558a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 11400000, guid: a4c15983d71e94043b44ae36a5b676e3, type: 2}

@@ -9,6 +9,8 @@ namespace Generation
         private List<GameObject> parts;
         public WheelPartsSO prefabsParts;
 
+        private int lastUsedPrefabs = -1;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -33,7 +35,14 @@ namespace Generation
 
         GameObject GenerateOne(float pitch = 0)
         {
-            GameObject prefab = Instantiate(prefabsParts.wheelParts[Random.Range(0, prefabsParts.wheelParts.Count)], transform);
+            int candidate = lastUsedPrefabs;
+            while (candidate == lastUsedPrefabs)
+            {
+                candidate = Random.Range(0, prefabsParts.wheelParts.Count);
+            }
+            lastUsedPrefabs = candidate;
+
+            GameObject prefab = Instantiate(prefabsParts.wheelParts[candidate], transform);
             prefab.transform.Rotate(Vector3.right * pitch);
             return prefab;
         }

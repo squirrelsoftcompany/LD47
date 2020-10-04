@@ -49,7 +49,7 @@ public class SoundManager : MonoBehaviour
         float currentBpm = (currentPitch * 60.0f);
 
 
-        SetBasePitch(currentPitch);
+        SetMusicPitch(currentPitch);
 
         float minDecile = Dora.Inst.behaviourSettings.wheelSpeedMin / 10.0f;
 
@@ -65,14 +65,24 @@ public class SoundManager : MonoBehaviour
         Set300BpmVolume(Mathf.Lerp(0.0001f, 1f, volume300bpm / 100.0f));
     }
 
-    public void SetMusicVolume(float volume)
+    public void SetMasterVolume(float volume)
     {
-        masterMixer.SetFloat("volume", Mathf.Log10(volume) * 20);
+        masterMixer.SetFloat("MasterVolume", Mathf.Log10(volume) * 20);
     }
 
-    public void SetBasePitch(float pitch)
+    public void SetSfxVolume(float volume)
     {
-        masterMixer.SetFloat("pitch", pitch/2.0f);
+        masterMixer.SetFloat("SfxVolume", Mathf.Log10(volume) * 20);
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        masterMixer.SetFloat("MusicVolume", Mathf.Log10(volume) * 20);
+    }
+
+    public void SetMusicPitch(float pitch)
+    {
+        masterMixer.SetFloat("MusicPitch", pitch/2.0f);
     }
 
     public void Set60BpmPitch(float pitch)

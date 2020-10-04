@@ -22,6 +22,7 @@ MonoBehaviour:
   fameMax: 1
   wheelSpeedPercentIncrement: 0.001
   wheelSpeedPercentDecrement: -0.05
-  fameSlidePercentIncrement: 0.01
+  wheelSpeedSlidePercentIncrement: 0
   famePercentIncrement: 0.001
   famePercentDecrement: -0.1
+  fameSlidePercentIncrement: 0.01

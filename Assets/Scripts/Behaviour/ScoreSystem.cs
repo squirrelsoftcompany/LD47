@@ -34,6 +34,7 @@ public class ScoreSystem : MonoBehaviour
     public void SuccessfulSlide()
     {
         AddFame(Dora.Inst.behaviourSettings.fameSlidePercentIncrement);
+        AddWheelSpeed(Dora.Inst.behaviourSettings.wheelSpeedSlidePercentIncrement);
     }
 
     public void Hit()

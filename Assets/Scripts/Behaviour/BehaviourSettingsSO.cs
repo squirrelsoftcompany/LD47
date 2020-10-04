@@ -26,8 +26,9 @@ namespace Behaviour
         [Header("Increments")]
         public float wheelSpeedPercentIncrement = 0.001f; // incr / tick
         public float wheelSpeedPercentDecrement = -0.05f; // decr / hit
-        public float fameSlidePercentIncrement = 0.01f; // incr / successful slide
+        public float wheelSpeedSlidePercentIncrement = 0f; // incr / successful slide
         public float famePercentIncrement = 0.001f; // incr / tick
         public float famePercentDecrement = -0.1f; // decr / hit
+        public float fameSlidePercentIncrement = 0.01f; // incr / successful slide
     }
 }

@@ -23,12 +23,20 @@ namespace Behaviour
         public float fameMin = 0;
         public float fameMax = 1;
 
-        [Header("Increments")]
+        [Header("WheelSpeed Increments")]
+        [Tooltip("incr / tick")]
         public float wheelSpeedPercentIncrement = 0.001f; // incr / tick
+        [Tooltip("decr / tick")]
         public float wheelSpeedPercentDecrement = -0.05f; // decr / hit
+        [Tooltip("incr / successful slide")]
         public float wheelSpeedSlidePercentIncrement = 0f; // incr / successful slide
+
+        [Header("Fame Increments")]
+        [Tooltip("incr / tick")]
         public float famePercentIncrement = 0.001f; // incr / tick
+        [Tooltip("decr / tick")]
         public float famePercentDecrement = -0.1f; // decr / hit
+        [Tooltip("incr / successful slide")]
         public float fameSlidePercentIncrement = 0.01f; // incr / successful slide
     }
 }

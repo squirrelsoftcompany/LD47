@@ -33,6 +33,8 @@ namespace Behaviour
         // Update is called once per frame
         void Update()
         {
+            animator.SetFloat("wheelSpeed", Dora.Inst.gameState.currentWheelSpeed);
+
             if (!Dora.Inst.gameState.running)
                 return;
 

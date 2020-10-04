@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6355e16b0340bca4db5fac1e73937f8d, type: 3}
   m_Name: GameStateSO
   m_EditorClassIdentifier: 
-  currentWheelSpeed: 0
+  currentWheelSpeed: 2
   currentFame: 0
   score: 0
+  running: 0
+  showMainScreen: 1

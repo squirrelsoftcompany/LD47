@@ -54,6 +54,9 @@ namespace Generation
         
         public void Tick()
         {
+            if (!Dora.Inst.gameState.running)
+                return;
+
             tickCount -= 1;
             if (tickCount > 0)
                 return;

@@ -33,6 +33,9 @@ namespace Behaviour
         // Update is called once per frame
         void Update()
         {
+            if (!Dora.Inst.gameState.running)
+                return;
+
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 ToLeft();

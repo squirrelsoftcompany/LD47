@@ -22,12 +22,20 @@ public class Dora : MonoBehaviour
         if (instance != null)
             Destroy(gameObject);
         instance = this;
+
+        // reset gamestate
         gameState.currentFame = behaviourSettings.initialFame;
         gameState.currentWheelSpeed = behaviourSettings.initialWheelSpeed;
         gameState.score = 0;
+        gameState.running = false;
 
         // initialize timer
         timer = behaviourSettings.wheelTick / behaviourSettings.initialWheelSpeed;
+    }
+
+    public void Run()
+    {
+        gameState.running = true;
     }
 
     // Update is called once per frame

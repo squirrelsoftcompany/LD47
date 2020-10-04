@@ -16,11 +16,17 @@ public class ScoreSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!Dora.Inst.gameState.running)
+            return;
+
         Dora.Inst.gameState.score += Time.deltaTime * 1000 * Dora.Inst.gameState.currentFame;
     }
 
     public void Tick()
     {
+        if (!Dora.Inst.gameState.running)
+            return;
+
         AddFame(Dora.Inst.behaviourSettings.famePercentIncrement);
         AddWheelSpeed(Dora.Inst.behaviourSettings.wheelSpeedPercentIncrement);
     }
@@ -41,6 +47,7 @@ public class ScoreSystem : MonoBehaviour
         Debug.Log("You loose !!!");
         Dora.Inst.gameState.currentWheelSpeed = 0;
         Dora.Inst.gameState.currentFame = 0;
+        Dora.Inst.gameState.running = false;
 
         GameOverEvent.Raise();
     }

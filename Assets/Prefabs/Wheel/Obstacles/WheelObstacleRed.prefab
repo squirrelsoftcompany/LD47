@@ -7,6 +7,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1586477014480783006, guid: 30d88b020e8e35149b86ab0866d5017a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.004872161
+      objectReference: {fileID: 0}
+    - target: {fileID: 1586477014480783006, guid: 30d88b020e8e35149b86ab0866d5017a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.034557823
+      objectReference: {fileID: 0}
+    - target: {fileID: 1586477014480783006, guid: 30d88b020e8e35149b86ab0866d5017a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.13952008
+      objectReference: {fileID: 0}
+    - target: {fileID: 1586477014480783006, guid: 30d88b020e8e35149b86ab0866d5017a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.98960406
+      objectReference: {fileID: 0}
+    - target: {fileID: 1586477014480783006, guid: 30d88b020e8e35149b86ab0866d5017a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1586477014480783006, guid: 30d88b020e8e35149b86ab0866d5017a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 16.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1586477014480783006, guid: 30d88b020e8e35149b86ab0866d5017a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.16
+      objectReference: {fileID: 0}
     - target: {fileID: 3139775612690032515, guid: 30d88b020e8e35149b86ab0866d5017a,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -70,7 +105,13 @@ PrefabInstance:
     - target: {fileID: 3139775612780992398, guid: 30d88b020e8e35149b86ab0866d5017a,
         type: 3}
       propertyPath: m_Name
-      value: WheelObstacle
+      value: WheelObstacleRed
       objectReference: {fileID: 0}
+    - target: {fileID: 7001552293093295224, guid: 30d88b020e8e35149b86ab0866d5017a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c21a0b3b0c11b10429ddbcb4c2cb5b31,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d88b020e8e35149b86ab0866d5017a, type: 3}

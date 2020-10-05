@@ -12,10 +12,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 7d7358a1844a0994ca206f63316ef860,
         type: 3}
+    - target: {fileID: 2919957617320070354, guid: 4c5255a41b763684a9cdd5cb726ee71c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7d7358a1844a0994ca206f63316ef860,
+        type: 3}
+    - target: {fileID: 6893616015232060980, guid: 4c5255a41b763684a9cdd5cb726ee71c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.13
+      objectReference: {fileID: 0}
     - target: {fileID: 7079093488261013284, guid: 4c5255a41b763684a9cdd5cb726ee71c,
         type: 3}
       propertyPath: m_Name
-      value: WheelObstacleChainsTire
+      value: WheelObstacleChainsTire Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7079093488261013287, guid: 4c5255a41b763684a9cdd5cb726ee71c,
         type: 3}

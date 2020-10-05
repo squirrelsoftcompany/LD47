@@ -97,5 +97,16 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: -0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4274832740964836905, guid: 30d88b020e8e35149b86ab0866d5017a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle/Limbo
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001552293093295224, guid: 30d88b020e8e35149b86ab0866d5017a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a401cca84e66eb9489dde5c194c01740,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d88b020e8e35149b86ab0866d5017a, type: 3}

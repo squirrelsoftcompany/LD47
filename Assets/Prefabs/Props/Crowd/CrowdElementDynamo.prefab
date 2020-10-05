@@ -11,12 +11,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 5837349652111263388, guid: dcf7cd29a67d8794eaebf4333b44d7ad,
+      objectReference: {fileID: 21300000, guid: 47c04c38be6ee3f468e2cc03f9d36f9c,
         type: 3}
     - target: {fileID: 8810200787437257157, guid: f546fce81c8086646a56a3bbc5cf393a,
         type: 3}
       propertyPath: m_Name
-      value: CrowdElement
+      value: CrowdElementDynamo
       objectReference: {fileID: 0}
     - target: {fileID: 8810200787437257162, guid: f546fce81c8086646a56a3bbc5cf393a,
         type: 3}
@@ -77,7 +77,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 5823425958614580656, guid: dcf7cd29a67d8794eaebf4333b44d7ad,
+      objectReference: {fileID: 21300000, guid: e4ee95d78533d6c408ab993f5d227eee,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f546fce81c8086646a56a3bbc5cf393a, type: 3}

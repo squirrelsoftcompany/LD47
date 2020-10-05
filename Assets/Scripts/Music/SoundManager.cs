@@ -12,18 +12,6 @@ public class SoundManager : MonoBehaviour
             return m_instance;
         }
     }
-    //public AudioSource Music
-    //{
-    //    get
-    //    {
-    //        return mMusic;
-    //    }
-    //    set
-    //    {
-    //        mMusic = value;
-    //    }
-    //}
-
     public static SoundManager m_instance = null;
     public AudioMixer masterMixer;
 
@@ -42,11 +30,6 @@ public class SoundManager : MonoBehaviour
         //float maxPitchFactor = Dora.Inst.behaviourSettings.wheelSpeedMax / Dora.Inst.behaviourSettings.wheelSpeedMin;
         float currentPitch = Dora.Inst.gameState.currentWheelSpeed / Dora.Inst.behaviourSettings.wheelSpeedMin;
         float currentBpm = (currentPitch * 60.0f);
-
-
-        SetMusicPitch(currentPitch);
-
-        float minDecile = Dora.Inst.behaviourSettings.wheelSpeedMin / 10.0f;
 
         float volume60bpm = ComputeVolume(currentBpm,0,180,6) + ComputeVolume(currentBpm, 240, 3000, 6);
         float volume120bpm = ComputeVolume(currentBpm,120,3000,6);

@@ -15,7 +15,7 @@ namespace Behaviour
         public double score = 0.0f;
         [Tooltip("Is game outside menu ?")]
         public bool running = false;
-        [Tooltip("Does the game must show MainScreen next time ?")]
+        [Tooltip("Does the game must show MainScreen next time ?"), System.NonSerialized]
         public bool showMainScreen = true;
 
         private void Awake()

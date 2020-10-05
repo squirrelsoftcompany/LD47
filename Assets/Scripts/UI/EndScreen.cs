@@ -23,6 +23,11 @@ namespace UI
 
         public void Show()
         {
+            //Update score
+            Text score = gameObject.transform.Find("ScoreValue").GetComponent<Text>();
+            score.text = Mathf.FloorToInt((float)Dora.Inst.gameState.score).ToString();
+
+            //Show UI
             Image endImage = gameObject.GetComponent<Image>();
             if(endImage)
             {

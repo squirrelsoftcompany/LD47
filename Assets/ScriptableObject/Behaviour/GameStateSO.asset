@@ -16,4 +16,3 @@ MonoBehaviour:
   currentFame: 0
   score: 0
   running: 0
-  showMainScreen: 1

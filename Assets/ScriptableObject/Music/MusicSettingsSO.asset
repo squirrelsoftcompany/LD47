@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89984e8b9bc7c2247a2b4959e29d6ed7, type: 3}
   m_Name: MusicSettingsSO
   m_EditorClassIdentifier: 
-  initialGeneralVolume: 0.5
-  generalVolumeIncrement: 0.2
+  initialGeneralVolume: 2
   state: 2

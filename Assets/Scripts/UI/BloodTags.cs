@@ -48,19 +48,19 @@ namespace UI
                     break;
             }
 
-            if (settings.generalVolume <= 0.0001)
+            if (settings.generalVolume == 0)
             {
                 volume.sprite = spriteVolume_0;
             }
-            else if (settings.generalVolume < 0.5)
+            else if (settings.generalVolume == 1)
             {
                 volume.sprite = spriteVolume_1;
             }
-            else if (settings.generalVolume < 1)
+            else if (settings.generalVolume == 2)
             {
                 volume.sprite = spriteVolume_2;
             }
-            else if (settings.generalVolume >= 1)
+            else if (settings.generalVolume == 3)
             {
                 volume.sprite = spriteVolume_3;
             }

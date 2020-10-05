@@ -13,8 +13,8 @@ public class MusicSettingsSO : ScriptableObject
         eAllMuted
     }
 
-    public float initialGeneralVolume = 0.5f;
-    public float generalVolumeIncrement = 0.1f;
+    [Tooltip("0: mute, 1: 33%, 2: 66%, 3: max"),Range(0, 3)]
+    public int initialGeneralVolume = 2;
     public VolumeState state = VolumeState.eAllActive;
 
     [NonSerialized]
@@ -22,7 +22,7 @@ public class MusicSettingsSO : ScriptableObject
     [NonSerialized]
     public float initialMusicVolume = 0;
     [NonSerialized]
-    public float generalVolume = 0.5f;
+    public int generalVolume = 2;
     [NonSerialized]
     public bool mustInitialize = true;
 }

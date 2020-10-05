@@ -29,15 +29,14 @@ public class MusicSettings : MonoBehaviour
             settings.state = (MusicSettingsSO.VolumeState)( ((int)settings.state + 1) % 3 );
         }
 
-        if (Input.GetKey(KeyCode.Plus) || Input.GetKey(KeyCode.KeypadPlus))
+        if (Input.GetKeyDown(KeyCode.Plus) || Input.GetKeyDown(KeyCode.KeypadPlus))
         {
-            settings.generalVolume = Mathf.Clamp(settings.generalVolume + (settings.generalVolumeIncrement * Time.deltaTime), 0.0001f, 1);
-            SoundManager.Instance.SetMasterVolume(settings.generalVolume);
+            settings.generalVolume = Mathf.Clamp(settings.generalVolume + 1, 0, 3);
         }
 
-        if (Input.GetKey(KeyCode.Minus) || Input.GetKey(KeyCode.KeypadMinus))
+        if (Input.GetKeyDown(KeyCode.Minus) || Input.GetKeyDown(KeyCode.KeypadMinus))
         {
-            settings.generalVolume = Mathf.Clamp(settings.generalVolume - (settings.generalVolumeIncrement * Time.deltaTime), 0.0001f, 1);
+            settings.generalVolume = Mathf.Clamp(settings.generalVolume - 1, 0, 3);
         }
 
         switch (settings.state)
@@ -54,6 +53,6 @@ public class MusicSettings : MonoBehaviour
             break;
         }
 
-        SoundManager.Instance.SetMasterVolume(settings.generalVolume);
+        SoundManager.Instance.SetMasterVolume(Mathf.Max(settings.generalVolume / 3.0f, 0.0001f)); // vol * (1/3)
     }
 }

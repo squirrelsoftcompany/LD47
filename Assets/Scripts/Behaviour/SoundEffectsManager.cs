@@ -7,6 +7,8 @@ public class SoundEffectsManager : MonoBehaviour
 
     public static SoundEffectsManager Instance;
 
+    public AudioSource OneShotAudioSource;
+
     public AudioClip dashSound;
     public AudioClip hurtSound;
     public AudioClip slideSound;
@@ -44,6 +46,6 @@ public class SoundEffectsManager : MonoBehaviour
 
     private void MakeSound(AudioClip originalClip)
     {
-        AudioSource.PlayClipAtPoint(originalClip, transform.position);
+        OneShotAudioSource.PlayOneShot(originalClip);
     }
 }

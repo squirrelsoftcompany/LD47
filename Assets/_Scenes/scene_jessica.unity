@@ -295,6 +295,65 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abe4c7b4e090b5946bdb06fd7fa5ed3d, type: 3}
+--- !u!1001 &726868996
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4759998584065775168, guid: b448a45c713290244bc25e246462fef0,
+        type: 3}
+      propertyPath: m_Name
+      value: WheelObstacleGreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 4759998584065775168, guid: b448a45c713290244bc25e246462fef0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4759998584065775171, guid: b448a45c713290244bc25e246462fef0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4759998584065775171, guid: b448a45c713290244bc25e246462fef0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4759998584065775171, guid: b448a45c713290244bc25e246462fef0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4759998584065775171, guid: b448a45c713290244bc25e246462fef0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4759998584065775171, guid: b448a45c713290244bc25e246462fef0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4759998584065775171, guid: b448a45c713290244bc25e246462fef0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4759998584065775171, guid: b448a45c713290244bc25e246462fef0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4759998584065775171, guid: b448a45c713290244bc25e246462fef0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b448a45c713290244bc25e246462fef0, type: 3}
 --- !u!1 &781014512
 GameObject:
   m_ObjectHideFlags: 0

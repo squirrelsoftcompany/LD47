@@ -34,4 +34,8 @@ MonoBehaviour:
     middle: {fileID: 4759998584065775168, guid: b448a45c713290244bc25e246462fef0,
       type: 3}
     right: {fileID: 4162644426029216507, guid: 82895cc183270514797a3d3697b87ddc, type: 3}
+  - left: {fileID: 0}
+    middle: {fileID: 7660197236737738879, guid: f665ea79642f43b4ca2178070bed0d2a,
+      type: 3}
+    right: {fileID: 7115514407037220688, guid: bd6b13aa6de990848a8f0168c8e514eb, type: 3}
   tickRate: 3

@@ -13,7 +13,9 @@ public class DeadZone : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+#if UNITY_EDITOR
         CheckAll();
+#endif // UNITY_EDITOR
     }
 
     // Update is called once per frame
@@ -38,6 +40,7 @@ public class DeadZone : MonoBehaviour
         return found;
     }
 
+#if UNITY_EDITOR
     void CheckAll()
     {
         for (int i = 0; i < tagsToDestroy.Count; i++)
@@ -47,6 +50,7 @@ public class DeadZone : MonoBehaviour
             Debug.Assert(Check(currentTag, UnityEditorInternal.InternalEditorUtility.tags), "DeadZone: Can't find tag " + currentTag);
         }
     }
+#endif // UNITY_EDITOR
 
     private void OnDrawGizmos()
     {

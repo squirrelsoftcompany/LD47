@@ -14,6 +14,8 @@ namespace Behaviour
         public float initialFame = 0.1f;
         [Tooltip("How much wheel part are needed")]
         public int wheelPartCount = 60;
+        [Tooltip("how much tick maxster must stay in a collider to take a hit (percent of a tick)")]
+        public float invulnerability = 0.5f;
 
         [Header("Limits")]
         public float wheelSpeedMin = 0;

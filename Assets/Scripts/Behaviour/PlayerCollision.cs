@@ -12,6 +12,10 @@ namespace Behaviour
     {
         private PlayerMovement playerMovement;
 
+        private Collider currentHitCollider = null;
+        private bool colliderHitted = false;
+        private float collideTimer = 0;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -39,10 +43,40 @@ namespace Behaviour
                 return;
             }
 
-            // Hitted
-            // TODO -> launch hit animation
-            hitEvent.Raise();
-            SoundEffectsManager.Instance.MakeHurtSound();
+            currentHitCollider = other;
+            collideTimer = Dora.Inst.behaviourSettings.invulnerability * 1 / Dora.Inst.gameState.currentWheelSpeed;
+            collideTimer += Time.deltaTime; // don't count the current frame
         }
+
+        private void OnTriggerStay(Collider other)
+        {
+            if (currentHitCollider != other || colliderHitted)
+            {
+                return;
+            }
+
+            collideTimer -= Time.deltaTime;
+
+            if (collideTimer <= 0)
+            {
+                // Hitted
+                // TODO -> launch hit animation
+                hitEvent.Raise();
+                SoundEffectsManager.Instance.MakeHurtSound();
+                colliderHitted = true;
+            }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (currentHitCollider != other)
+            {
+                return;
+            }
+
+            currentHitCollider = null;
+            colliderHitted = false;
+        }
+
     }
 }

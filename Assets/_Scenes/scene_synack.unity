@@ -614,25 +614,6 @@ Avatar:
     m_HasTranslationDoF: 0
     m_HasExtraRoot: 0
     m_SkeletonHasParents: 1
---- !u!1 &2055270746 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1357951633759038587, guid: 3c7d3264c0f91e44c843fe042364850c,
-    type: 3}
-  m_PrefabInstance: {fileID: 30197082}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2055270747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2055270746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebca8f73b66c4204a99ed3faefa25ac2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  masterMixer: {fileID: 24100000, guid: 8522f221a0533bf41a3871d359413161, type: 2}
 --- !u!1001 &8372904417295590529
 PrefabInstance:
   m_ObjectHideFlags: 0

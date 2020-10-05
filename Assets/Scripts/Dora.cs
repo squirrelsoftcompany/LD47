@@ -36,6 +36,7 @@ public class Dora : MonoBehaviour
     public void Run()
     {
         gameState.running = true;
+        gameState.showMainScreen = false;
     }
 
     // Update is called once per frame

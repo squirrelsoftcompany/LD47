@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 842589642095923084}
+  - component: {fileID: 62924691}
   m_Layer: 0
   m_Name: BloodTags
   m_TagString: Untagged
@@ -32,6 +33,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -12, y: 0, z: 0}
+--- !u!114 &62924691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842589642095923085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70fc1934a7837e48a40de4f190c373f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 11400000, guid: a4c15983d71e94043b44ae36a5b676e3, type: 2}
+  music: {fileID: 4731456000244017625}
+  SFX: {fileID: 3625340749285207120}
+  volume: {fileID: 2333688680718201382}
+  spriteSFX: {fileID: -9148708031133113715, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
+    type: 3}
+  spriteSFXMute: {fileID: -2782945124802923161, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
+    type: 3}
+  spriteMusic: {fileID: 1186061081218418376, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
+    type: 3}
+  spriteMusicMute: {fileID: -8125418012021123197, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
+    type: 3}
+  spriteVolume_0: {fileID: 9004211885295647573, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
+    type: 3}
+  spriteVolume_1: {fileID: 2422179748178055750, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
+    type: 3}
+  spriteVolume_2: {fileID: 4133537873590748484, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
+    type: 3}
+  spriteVolume_3: {fileID: 8617743412120999107, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
+    type: 3}
 --- !u!1 &842589642302031830
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,9 +76,8 @@ GameObject:
   - component: {fileID: 842589642302031826}
   - component: {fileID: 842589642302031827}
   - component: {fileID: 842589642302031829}
-  - component: {fileID: 842589642302031825}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: CanvasTutorials
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,38 +141,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &842589642302031825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 842589642302031830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b70fc1934a7837e48a40de4f190c373f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settings: {fileID: 11400000, guid: a4c15983d71e94043b44ae36a5b676e3, type: 2}
-  music: {fileID: 0}
-  SFX: {fileID: 0}
-  volume: {fileID: 0}
-  spriteSFX: {fileID: -9148708031133113715, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
-    type: 3}
-  spriteSFXMute: {fileID: -2782945124802923161, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
-    type: 3}
-  spriteMusic: {fileID: 1186061081218418376, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
-    type: 3}
-  spriteMusicMute: {fileID: -8125418012021123197, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
-    type: 3}
-  spriteVolume_0: {fileID: 9004211885295647573, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
-    type: 3}
-  spriteVolume_1: {fileID: 2422179748178055750, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
-    type: 3}
-  spriteVolume_2: {fileID: 4133537873590748484, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
-    type: 3}
-  spriteVolume_3: {fileID: 8617743412120999107, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
-    type: 3}
 --- !u!1 &842589642735217320
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,9 +304,8 @@ GameObject:
   - component: {fileID: 4279345156399471600}
   - component: {fileID: 1835801551565392080}
   - component: {fileID: 9089684870534966548}
-  - component: {fileID: 5572951652382566258}
   m_Layer: 0
-  m_Name: Canvas (1)
+  m_Name: CanvasSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -370,38 +369,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &5572951652382566258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848114454431516217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b70fc1934a7837e48a40de4f190c373f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settings: {fileID: 11400000, guid: a4c15983d71e94043b44ae36a5b676e3, type: 2}
-  music: {fileID: 4731456000244017625}
-  SFX: {fileID: 3625340749285207120}
-  volume: {fileID: 2333688680718201382}
-  spriteSFX: {fileID: -9148708031133113715, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
-    type: 3}
-  spriteSFXMute: {fileID: -2782945124802923161, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
-    type: 3}
-  spriteMusic: {fileID: 1186061081218418376, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
-    type: 3}
-  spriteMusicMute: {fileID: -8125418012021123197, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
-    type: 3}
-  spriteVolume_0: {fileID: 9004211885295647573, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
-    type: 3}
-  spriteVolume_1: {fileID: 2422179748178055750, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
-    type: 3}
-  spriteVolume_2: {fileID: 4133537873590748484, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
-    type: 3}
-  spriteVolume_3: {fileID: 8617743412120999107, guid: e6d7cbc0ee8113b44aa197ad43ed22a9,
-    type: 3}
 --- !u!1 &1944945007137059553
 GameObject:
   m_ObjectHideFlags: 0

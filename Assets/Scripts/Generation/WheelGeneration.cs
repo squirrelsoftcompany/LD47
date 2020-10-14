@@ -8,6 +8,7 @@ namespace Generation
     {
         private List<GameObject> parts;
         public WheelPartsSO prefabsParts;
+        public WheelObstaclesSO wheelObstacles;
 
         private int lastUsedPrefabs = -1;
 
@@ -29,11 +30,11 @@ namespace Generation
             float fraction = 360f / Dora.Inst.behaviourSettings.wheelPartCount;
             for (int i = 0; i < Dora.Inst.behaviourSettings.wheelPartCount; i++)
             {
-                parts.Add(GenerateOne(i * fraction));
+                parts.Add(GenerateOne(i * fraction, i%wheelObstacles.tickRate == 0));
             }
         }
 
-        GameObject GenerateOne(float pitch = 0)
+        GameObject GenerateOne(float pitch = 0, bool blacken = false)
         {
             int candidate = lastUsedPrefabs;
             while (candidate == lastUsedPrefabs)
@@ -44,6 +45,8 @@ namespace Generation
 
             GameObject prefab = Instantiate(prefabsParts.wheelParts[candidate], transform);
             prefab.transform.Rotate(Vector3.right * pitch);
+            if (blacken)
+                prefab.GetComponentInChildren<Renderer>().material.color = Color.grey;
             return prefab;
         }
     }

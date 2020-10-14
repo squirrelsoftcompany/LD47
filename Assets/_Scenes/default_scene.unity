@@ -443,6 +443,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1385427759, guid: 35797984291b8e14b9090a6a37beb955, type: 3}
+      propertyPath: wheelObstacles
+      value: 
+      objectReference: {fileID: 11400000, guid: 16c0277da6dc1b24d800aaab7c879099,
+        type: 2}
     - target: {fileID: 1607677023063720682, guid: 35797984291b8e14b9090a6a37beb955,
         type: 3}
       propertyPath: m_LocalPosition.x

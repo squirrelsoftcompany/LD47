@@ -43,7 +43,7 @@ namespace Generation
         // Start is called before the first frame update
         void Start()
         {
-            tickCount = wheelObstacles.tickRate;
+            tickCount = 0;
         }
 
         // Update is called once per frame
@@ -54,16 +54,17 @@ namespace Generation
         
         public void Tick()
         {
-            if (!Dora.Inst.gameState.running)
-                return;
-
             tickCount -= 1;
             if (tickCount > 0)
                 return;
 
+            tickCount = wheelObstacles.tickRate;
+
+            if (!Dora.Inst.gameState.running)
+                return;
+
             float fraction = 360f / Dora.Inst.behaviourSettings.wheelPartCount;
             GenerateRow(wheelObstacles.rows[Random.Range(0, wheelObstacles.rows.Count)], fraction * -(Dora.Inst.behaviourSettings.wheelPartCount / 3)); // Player can see a little more than 1/4 of the wheel -> so appear at 1/3
-            tickCount = wheelObstacles.tickRate;
         }
 
         public void GenerateRow(WheelObstacleRow row, float pitch)

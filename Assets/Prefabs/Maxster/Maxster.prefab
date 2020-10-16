@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: 6180727261843057232}
   - component: {fileID: 8372904416874671433}
   - component: {fileID: 5986557853786281061}
+  - component: {fileID: 7929733294090471936}
   m_Layer: 0
   m_Name: Maxster
   m_TagString: Untagged
@@ -330,6 +331,46 @@ MonoBehaviour:
   successfulSlideEvent: {fileID: 11400000, guid: b660bd46e56af874e90f8baeef2e66f4,
     type: 2}
   hitEvent: {fileID: 11400000, guid: a43326ac3afccf64ab82bb233f143b64, type: 2}
+--- !u!114 &7929733294090471936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8372904416874671427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39e69ee488484439cd909f5f2a3254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a43326ac3afccf64ab82bb233f143b64, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8372904416874671426}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Hit
+          m_BoolArgument: 0
+        m_CallState: 2
+  responseForSentString:
+    m_PersistentCalls:
+      m_Calls: []
+  responseForSentInt:
+    m_PersistentCalls:
+      m_Calls: []
+  responseForSentFloat:
+    m_PersistentCalls:
+      m_Calls: []
+  responseForSentBool:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8372904417352098491
 GameObject:
   m_ObjectHideFlags: 0

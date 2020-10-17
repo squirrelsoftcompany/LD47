@@ -9634,6 +9634,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3692885093145299087}
   - component: {fileID: 2275811713728060698}
+  - component: {fileID: 5758888616227422324}
   m_Layer: 0
   m_Name: (Not)Wheel
   m_TagString: Untagged
@@ -9674,6 +9675,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f91a2ec96ddae6749b35e689cd0d3006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sheafImpact: 5
+--- !u!114 &5758888616227422324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3692885093145299086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39e69ee488484439cd909f5f2a3254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: b660bd46e56af874e90f8baeef2e66f4, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2275811713728060698}
+        m_TargetAssemblyTypeName: FireElevation, Assembly-CSharp
+        m_MethodName: InitiateSheaf
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  responseForSentString:
+    m_PersistentCalls:
+      m_Calls: []
+  responseForSentInt:
+    m_PersistentCalls:
+      m_Calls: []
+  responseForSentFloat:
+    m_PersistentCalls:
+      m_Calls: []
+  responseForSentBool:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3692885093408298758
 GameObject:
   m_ObjectHideFlags: 0
